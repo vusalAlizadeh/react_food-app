@@ -1,0 +1,85 @@
+.setting-section{
+    padding-inline: 25vw;
+    padding-top: 8vh;
+    color: var(--text-color);
+
+    //general btn
+    .btn{
+            border: none;
+            outline: none;
+            padding: 0.75em 1em;
+            text-transform: uppercase;
+            border-radius: 5px;
+            background-color: var(--primary-color);
+            color: var(--background-color);
+            font-weight: bold;
+            letter-spacing: 2px;
+            font-size: 0.9em;
+            box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+            margin-right: 0.5em;
+            font-size: 1em;
+            color: #fff;
+
+            span{
+                
+                display: inline-block;
+                margin-left: 0.5em;
+            }
+            // svg{
+            //     margin-left: 0.4em;
+            //     font-size: 1.2em;
+               
+            // }
+    }
+
+
+
+    .container{
+        margin-bottom: 2.5em;
+        .option-container{
+            box-shadow: 0 5px 10px var(--shadow-color);
+            padding: 1em;
+            border-radius: 5px;
+            border-left: 0.5em solid var(--primary-color);
+            margin-top: 1em;
+            display: flex;
+            
+
+            .option{
+                height: 3.5em;
+                width: 3.5em;
+                box-shadow: 0 3px 6px var(--shadow-color);
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 1em;
+
+                &.light{
+                    background-color: #fff;
+                }
+                &.dark{
+                    background-color: rgb(29, 29, 29);
+                }
+
+
+                .check{
+                    background-color: var(--primary-color);
+                    height: 2.5em;
+                    width: 2.5em;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    box-shadow: 0 2px 5px var(--shadow-color);
+
+                    svg{
+                        height: 1.5em;
+                        width: 1.5em;
+                        
+                    }
+                }
+            }
+        }
+    }
+}

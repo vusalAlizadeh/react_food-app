@@ -1,0 +1,297 @@
+:root{
+    --background-color: #fff;
+    --background-light: #fff;
+    --shadow-color: rgba(0,0,0,0.2);
+    --primary-color: rgb(255, 0, 86);
+    --text-color: #0A0A0A;
+    --text-light: #575757;
+    --font-size: 16px;
+    --animation-speed: 1;
+}
+
+
+@function getAnimationDuration ($duration:number){
+    @return calc($duration * var(--animation-speed))
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: var(--font-size);
+    font-family: 'Roboto', sans-serif;
+    padding-top: 55px;
+    background-color: var(--background-light);
+}
+
+
+a{
+    text-decoration: none;
+}
+body{
+    overflow-x: hidden
+}
+
+// .main-container{
+//     padding-inline: 25vw;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+// }
+
+
+//Navbar section
+@import "./Navbar.scss";
+
+
+//sidebar section
+@import "./Sidebar";
+
+//Hero section
+@import "./HeroSection.scss";
+
+//Improve section
+@import "./ImproveSection";
+
+//Quote section
+@import "./QuoteSection";
+
+//Chief Section
+@import "./chiefSection.scss";
+
+//Footer section
+@import "./footerSection.scss";
+
+//recipes section
+@import "./recipeSection.scss";
+
+//settings section
+@import "./settingSection.scss";
+
+//animation section
+@import "./animation.scss";
+
+
+//media query
+
+@media only screen and (max-width:1200px){
+    .navbar,.hero-section,.improve-skills,.quote-section,
+    .chief-section,.footer-section,.container-recipes,.setting-section{
+        padding-inline: 18vw;
+    }
+}
+
+@media only screen and (max-width:1050px){
+    .navbar,.hero-section,.improve-skills,.quote-section,.chief-section,
+    .footer-section,.container-recipes,.setting-section{
+        padding-inline: 12vw;
+    }
+}
+
+@media only screen and (max-width:768px){
+    .navbar,.hero-section,.improve-skills,.quote-section,
+    .chief-section,.footer-section,.container-recipes,.setting-section{
+        padding-inline: 6vw;
+    }
+    .navbar{
+        .navbar-links{
+            display: none;
+        }
+        .sidebar-btn{
+            display: flex;
+        }
+
+    }
+
+    .hero-section{
+        flex-direction: column;
+        padding-block: 3vh;
+        
+        .hero-info{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .hero-title{
+                margin-top: 0;
+                text-align: center;
+            }
+
+            .hero-btn{
+                margin-bottom: 1.5em;
+            }
+        }
+    }
+    
+    .sidebar{
+        padding-top: 4em;
+    }
+
+
+
+
+    .improve-skills{
+        flex-direction: column;
+
+        .skills{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .title{
+                font-size: 2em;
+                margin: 0.5em 0;
+            }
+
+            .improve-skill-btn{
+                margin-top: 1.2em;
+            }
+            .custom-skill-container{
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                
+                    .custom-skill{
+                        margin-right: 0.7em;
+                        margin-bottom: 0.6em;
+                    }
+            }
+        }
+
+        
+    }
+
+    .chief-section{
+        .custom-chief{
+            box-shadow: 0 5px 10px var(--shadow-color);
+        }
+    }
+
+
+    .footer-section{
+        flex-direction: column;
+        margin-top: 3vh;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        
+        .footer-info,.footer-contact{
+            margin-bottom: 1em;
+        }
+    }
+
+
+    .quote-section{
+        padding-block: 4vh;
+    }
+
+    .setting-section{
+        padding-top: 3vh;
+        padding-bottom: 0;
+    }
+
+
+    .container-recipes{
+        padding-block: 3vh;
+
+        .previous-search{
+
+            .search-container{
+                margin: 1.2em 0;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width:480px){
+    
+    .navbar,.hero-section,.improve-skills,.quote-section,.chief-section,
+    .footer-section,.container-recipes,.setting-section{
+        padding-inline: 3vw;
+
+    }
+
+    .hero-section{
+        .hero-info{
+            .hero-title{
+                font-size: 2.3em;
+            }
+            .hero-info-text{
+                width: 100%;
+            }
+        }
+        .hero-images{
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(9, 200px);
+        }
+    }
+
+    .improve-skills{
+        .skills{
+            .title{
+                font-size: 1.5em;
+            }
+        }
+    }
+
+    .chief-section{
+        .title{
+            font-size: 1.6em;
+            text-align: center;
+            margin: 1em 0 0 0;
+        }
+    }
+
+
+    .quote-section{
+        padding-block: 4vh;
+    }
+    .footer-section{
+        margin-top: 3vh;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+    }
+
+    .setting-section{
+        padding-top: 3vh;
+        padding-bottom: 0;
+
+        .btn{
+            padding: 0.75em 0.7em;
+            font-size: 0.9em;
+        }
+    }
+}
+
+@media only screen and (max-width:370px){
+    .hero-section{
+        .hero-info{
+            .hero-title{
+                font-size: 1.9em;
+            }
+        }
+        
+    }
+
+    .improve-skills{
+        .skills{
+            .title{
+                font-size: 1.3em;
+            }
+        }
+    }
+
+    .setting-section{
+        .btn{
+            padding: 0.75em 0.7em;
+            font-size: 0.8em;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.quote-section{
+    padding-block: 7vh;
+    padding-inline: 25vw;
+    
+    svg{
+        color: var(--primary-color);
+        font-size: 2em;
+        margin-right: 0.6em;
+    }
+
+    .info{
+        font-size: 1.1em;
+        text-align: justify;
+        margin-bottom: 1em;
+        margin-top: 0.5em;
+        color:var(--text-color)
+    }
+    .author{
+        font-size: 1em;
+        opacity: 0.9;
+        text-align: right;
+        color:var(--text-color)
+    }
+}
